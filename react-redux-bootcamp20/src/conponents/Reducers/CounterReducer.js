@@ -1,4 +1,4 @@
-import { increment, decrement } from "../Actions/actionType";
+import { increment, decrement, reset } from "../Actions/actionType";
 
 const initState = {
   count: 0,
@@ -15,6 +15,11 @@ const counterReducer = (state = initState, action) => {
       return {
         ...state,
         count: state.count - 1,
+      };
+
+    case reset:
+      return {
+        ...initState,
       };
 
     default:

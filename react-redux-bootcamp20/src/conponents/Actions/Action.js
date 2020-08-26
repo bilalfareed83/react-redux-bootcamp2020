@@ -1,4 +1,4 @@
-import { increment, decrement } from "./actionType";
+import { increment, decrement, reset } from "./actionType";
 
 export const incrementAction = () => ({
   type: increment,
@@ -6,4 +6,8 @@ export const incrementAction = () => ({
 
 export const decrementAction = () => ({
   type: decrement,
+});
+
+export const resetAction = () => ({
+  type: reset,
 });
