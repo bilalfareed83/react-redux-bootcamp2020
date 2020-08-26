@@ -1,23 +1,14 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import { Home } from "./conponents/Home";
+import { Count } from "./conponents/Count";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const add = () => {
-    setCount(count + 1);
-  };
-  const less = () => {
-    setCount(count - 1);
-  };
   return (
     <div className="App">
       <h2>React Redux</h2>
-      <br />
-      {count}
-      <Home add={add} less={less} />
+      <Count />
+      <Home />
     </div>
   );
 }

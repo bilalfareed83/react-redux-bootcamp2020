@@ -1,10 +1,28 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
-export const Home = ({ add, less }) => {
+export const Home = () => {
+  const dispatch = useDispatch();
   return (
     <div>
-      <button onClick={add}>Add</button>
-      <button onClick={less}>Less</button>
+      <button
+        onClick={() =>
+          dispatch({
+            type: "INCREMENT",
+          })
+        }
+      >
+        +
+      </button>
+      <button
+        onClick={() =>
+          dispatch({
+            type: "DECREMENT",
+          })
+        }
+      >
+        -
+      </button>
     </div>
   );
 };
