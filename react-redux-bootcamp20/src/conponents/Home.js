@@ -1,28 +1,13 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { incrementAction, decrementAction } from "./Actions/Action";
 
 export const Home = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <button
-        onClick={() =>
-          dispatch({
-            type: "INCREMENT",
-          })
-        }
-      >
-        +
-      </button>
-      <button
-        onClick={() =>
-          dispatch({
-            type: "DECREMENT",
-          })
-        }
-      >
-        -
-      </button>
+      <button onClick={() => dispatch(incrementAction())}>+</button>
+      <button onClick={() => dispatch(decrementAction())}>-</button>
     </div>
   );
 };
