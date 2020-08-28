@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { incrementAction, decrementAction } from "./Actions/Action";
+import { incrementAction, decrementAction,resetAction } from "./Actions/Action";
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -8,6 +8,7 @@ export const Home = () => {
     <div>
       <button onClick={() => dispatch(incrementAction())}>+</button>
       <button onClick={() => dispatch(decrementAction())}>-</button>
+      <button onClick={() => dispatch(resetAction())}>Reset</button>
     </div>
   );
 };
